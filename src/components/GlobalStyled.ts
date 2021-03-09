@@ -10,12 +10,11 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         background-color: #F2F2F7;
+        font-size: 16px;
+        font-family: 'Noto Sans KR', sans-serif;
     }
 
-    * {
-        font-size: 14px;
-        font-family: "Noto Sans KR";
-    }
+    
 `;
 
 export default GlobalStyle;
