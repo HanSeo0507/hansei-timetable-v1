@@ -10,6 +10,7 @@ type IUser = {
 const AuthContext = createContext<IUser>({});
 
 const AuthProvider: React.FC = (props) => {
+	// eslint-disable-next-line
 	const [cookies, setCookies] = useCookies(["userInfo"]);
 	const [user, setUser] = useState({});
 	const [init, setInit] = useState(false);
@@ -17,6 +18,7 @@ const AuthProvider: React.FC = (props) => {
 	useEffect(() => {
 		if (cookies.userInfo) setUser(cookies.userInfo);
 		setInit(true);
+		// eslint-disable-next-line
 	}, []);
 
 	return <AuthContext.Provider value={user}>{init && props.children}</AuthContext.Provider>;

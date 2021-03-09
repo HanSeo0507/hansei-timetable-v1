@@ -14,7 +14,7 @@ interface ISelectOption {
 }
 
 const Login: React.FC = () => {
-	const history = useHistory();
+	const history = useHistory(); // eslint-disable-next-line
 	const [cookies, setCookie] = useCookies(["userInfo"]);
 
 	const [error, setError] = useState("");

@@ -92,6 +92,7 @@ const Main: React.FC = () => {
 		setInterval(() => {
 			initialize();
 		}, 1000);
+		// eslint-disable-next-line
 	}, []);
 
 	//const nextSubject = getNextSubject(new Date(2021, 2, 9, 8, 39), restTime, timetable[today]);
@@ -226,10 +227,6 @@ const DescText = styled.p<{ isClassOf?: boolean }>`
 `;
 
 const DescTimeWrapper = styled.div``;
-
-const DescTimeText = styled.span`
-	font-weight: 400;
-`;
 
 const DescTimeNow = styled.span`
 	font-weight: 500;
