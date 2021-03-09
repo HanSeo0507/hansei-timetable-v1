@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { useCookies } from "react-cookie";
-import { useHistory } from "react-router-dom";
 import Select, { ValueType } from "react-select";
 
 import { Container, Button } from "src/components";
