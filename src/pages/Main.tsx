@@ -73,7 +73,7 @@ const Main: React.FC = () => {
 	};
 
 	const ZoomLink = (subject: string) => {
-		return `${isMobile ? "zoomus://" : "zoommt://"}zoom.us/join?confno=${zoomIds[subject]}&usname=${classOf}`;
+		return `${isMobile ? "zoomus://" : "zoommtg://"}zoom.us/join?confno=${zoomIds[subject]}&usname=${classOf}`;
 	};
 
 	const initialize = () => {
