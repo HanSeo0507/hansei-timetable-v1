@@ -73,13 +73,13 @@ const Main: React.FC = () => {
 	};
 
 	const ZoomLink = (subject: string) => {
-		return `${isMobile ? "zoomus://" : "zoommtg://"}zoom.us/join?confno=${zoomIds[subject]}&usname=${classOf}`;
+		return `${isMobile ? "zoomus://" : "zoommtg://"}zoom.us/join?confno=${zoomIds[subject].replace(/ /g, "")}&uname=${classOf}`;
 	};
 
 	const initialize = () => {
 		setNow(new Date());
 		setToday(getDay(new Date().getDay()));
-		setClassOf(`${_class?.replace("G", "게").replace("H", "해")}${number} ${name}`);
+
 		setNowClass(getNowSubject(new Date(), classTime));
 		setNextClass(getNextSubject(new Date(), restTime, timetable[today]));
 	};
@@ -94,8 +94,6 @@ const Main: React.FC = () => {
 		}, 1000);
 		// eslint-disable-next-line
 	}, []);
-
-	//const nextSubject = getNextSubject(new Date(2021, 2, 9, 8, 39), restTime, timetable[today]);
 
 	return (
 		<div className="container h-100">
@@ -116,7 +114,7 @@ const Main: React.FC = () => {
 													<DescText className="mb-2">
 														지금은 <DescBold>{nextClass.index === 0 ? "수업 시작 전" : `${time[nextClass.index - 1]} ${nextClass.type}`}</DescBold>입니다
 													</DescText>
-													<DescText>
+													<DescText className="mb-2">
 														다음 시간은{" "}
 														<DescBold>
 															{time[nextClass.index]} {nextClass.class}
@@ -124,6 +122,9 @@ const Main: React.FC = () => {
 														입니다
 													</DescText>
 
+													<DescText isClassOf className="mt-3">
+														학번: <DescBold>{classOf}</DescBold>
+													</DescText>
 													<a href={ZoomLink(timetable[today][nextClass.index])}>
 														<DescButton className="mt-1">수업 참가하기 ({zoomIds[timetable[today][nextClass.index]]})</DescButton>
 													</a>
