@@ -1,5 +1,6 @@
 import React from "react";
 import { CookiesProvider } from "react-cookie";
+import * as Sentry from "@sentry/react";
 
 import Router from "src/routes";
 import AuthProvider from "src/Auth";
@@ -16,4 +17,4 @@ const App: React.FC = () => {
 	);
 };
 
-export default App;
+export default Sentry.withProfiler(App);
