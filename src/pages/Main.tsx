@@ -139,7 +139,7 @@ const Main: React.FC = () => {
 											<div className="my-auto">
 												<DescText>수업시간까지 남은 시간</DescText>
 												<DescText>
-													<DescBold>{getLeftTime(classTime[nextClass.index].finish, now.getTime())}</DescBold>
+													<DescBold>{getLeftTime(classTime[nextClass.index].start, now.getTime())}</DescBold>
 												</DescText>
 											</div>
 										</div>
