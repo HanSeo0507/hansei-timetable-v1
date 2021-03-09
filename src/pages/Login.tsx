@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { useCookies } from "react-cookie";
-import { useHistory } from "react-router-dom";
 import Select, { ValueType } from "react-select";
 
 import { Container, Button } from "src/components";
@@ -14,7 +13,7 @@ interface ISelectOption {
 }
 
 const Login: React.FC = () => {
-	const history = useHistory(); // eslint-disable-next-line
+	// eslint-disable-next-line
 	const [cookies, setCookie] = useCookies(["userInfo"]);
 
 	const [error, setError] = useState("");
@@ -54,7 +53,7 @@ const Login: React.FC = () => {
 
 		if (major && _class && number && name) {
 			setCookie("userInfo", JSON.stringify({ _class, number, name }));
-			history.push("/");
+			window.location.href = "/";
 		} else {
 			if (!major) errorValue.push("학과");
 			if (!_class) errorValue.push("반");
