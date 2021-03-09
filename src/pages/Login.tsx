@@ -141,7 +141,7 @@ const LoginTitleWrapper = styled.div`
 `;
 
 const LoginTitleLogo = styled.img`
-	displayy: block;
+	display: block;
 
 	width: 9rem;
 	height: auto;
