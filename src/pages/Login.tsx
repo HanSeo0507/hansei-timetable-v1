@@ -54,7 +54,7 @@ const Login: React.FC = () => {
 
 		if (major && _class && number && name) {
 			setCookie("userInfo", JSON.stringify({ _class, number, name }));
-			history.push("/");
+			history.push({ pathname: "/" });
 		} else {
 			if (!major) errorValue.push("학과");
 			if (!_class) errorValue.push("반");
