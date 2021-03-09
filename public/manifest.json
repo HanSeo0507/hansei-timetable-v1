@@ -1,0 +1,9 @@
+{
+	"short_name": "한세고 보안1-2 시간표",
+	"name": "한세사이버보안고등학교 해킹보안과정 1학년 2반 시간표",
+	"icons": [{ "src": "favicon.ico", "sizes": "192x192", "type": "image/png" }],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#CCDA27",
+	"background_color": "#F2F2F7"
+}
