@@ -107,7 +107,7 @@ const Main: React.FC = () => {
 						<div className="row">
 							{nowClass < 0 ? (
 								<>
-									<div className="col-12 col-md-6 py-4">
+									<div className={nextClass ? "col-12 col-md-6 py-4" : "col-12 pt-0 pb-3"}>
 										<div>
 											{nextClass ? (
 												<>
@@ -130,7 +130,7 @@ const Main: React.FC = () => {
 													</a>
 												</>
 											) : (
-												"오늘 수업이 모두 종료되었습니다. 수고하셨습니다."
+												<DescText className="mx-auto">오늘 수업이 모두 종료되었습니다.</DescText>
 											)}
 										</div>
 									</div>
