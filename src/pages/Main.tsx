@@ -31,7 +31,6 @@ const Main: React.FC = () => {
 		{ start: new Date().setHours(9, 30, 0), finish: new Date().setHours(10, 10, 0) },
 		{ start: new Date().setHours(10, 20, 0), finish: new Date().setHours(11, 0, 0) },
 		{ start: new Date().setHours(11, 10, 0), finish: new Date().setHours(11, 50, 0) },
-		{ start: new Date().setHours(12, 0, 0), finish: new Date().setHours(12, 40, 0) },
 		{ start: new Date().setHours(12, 50, 0), finish: new Date().setHours(13, 30, 0) },
 		{ start: new Date().setHours(13, 40, 0), finish: new Date().setHours(14, 20, 0) },
 		{ start: new Date().setHours(14, 30, 0), finish: new Date().setHours(15, 10, 0) },
